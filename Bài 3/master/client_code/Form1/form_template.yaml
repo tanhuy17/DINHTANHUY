@@ -1,0 +1,39 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: headline_1
+    properties: {role: headline, text: BÀI TẬP 3, align: center}
+    type: Label
+    layout_properties: {grid_position: 'XVIEWP,NPIGZX'}
+  - name: label_1
+    properties: {text: 'NHẬP DÃY SỐ:'}
+    type: Label
+    layout_properties: {grid_position: 'JOIQJR,XJUGEZ'}
+  - name: so_txt
+    properties: {text: ''}
+    type: TextBox
+    layout_properties: {grid_position: 'GDVMTT,NSWOPJ'}
+  - name: btn_sap_xep
+    properties: {text: SẮP XẾP}
+    type: Button
+    layout_properties: {grid_position: 'ZEXBHZ,MFRYAY'}
+    event_bindings: {click: btn_sap_xep_click}
+  - name: label_2
+    properties: {text: 'KẾT QUẢ:'}
+    type: Label
+    layout_properties: {grid_position: 'MMBADM,RNGSPR'}
+  - name: txt_so
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'XPNTAU,TGMHMU'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
